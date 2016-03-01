@@ -1,0 +1,22 @@
+<html>
+<head>
+  <title>click-tracker</title>
+  <script type="text/javascript" src="skateboard.min.js"></script>
+</head>
+<body>
+
+<a id="clickable" href="#">click me</a>
+
+<script type="text/javascript">
+
+  var stream = skateboard('http://localhost:8000')
+
+  document.getElementById('clickable').addEventListener('click', function(e) {
+    e.preventDefault()
+
+    stream.write('hey hey!')
+  })
+
+</script>
+</body>
+</html>
